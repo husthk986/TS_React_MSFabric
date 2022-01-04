@@ -1,0 +1,46 @@
+/** Main Layout rules */
+@import "./_variables.scss";
+
+.App {
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.App .Body {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.Body .Sidebar {
+  order: -1;    
+}
+
+.Body .Content {
+  flex: 0;
+  order: 0; 
+}
+  
+.App .Header {
+  height: O365-shell-height;
+  z-index: 1;
+}
+
+.App .Footer {
+  height: 4em;
+  z-index: 1;
+}
+
+.App:after,
+.App .Header:after,
+.App .Body:after,
+.App .Body .Content:after,
+.App .Body .Sidebar:after,
+.App .Footer:after {
+  content: "\00a0";
+}

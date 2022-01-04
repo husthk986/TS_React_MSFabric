@@ -1,0 +1,10 @@
+.Footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002050;
+}
+  
+.Footer-container {
+    color: rgb(255, 255, 255);
+}

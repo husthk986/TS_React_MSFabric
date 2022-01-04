@@ -1,0 +1,102 @@
+@import "../_variables.scss";
+
+$chat-panel-transition-duration: 0.2s ease;
+$chat-panel-width: 400px;
+$collapsed-side-bar-width: 48px;
+$expanded-side-bar-width: 200px;
+
+.app-container {
+  position: absolute;
+  top: #{$O365-shell-height};
+  left: $expanded-side-bar-width;
+  bottom: 4em;
+  max-height: calc(100vh - #{$O365-shell-height} - 4em);
+  max-width: calc(100vw - #{$expanded-side-bar-width});
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .flex-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    transition: transform $chat-panel-transition-duration;
+
+    &.chat-panel-visible {
+      transform: translateX(0);
+    }
+
+    &.chat-panel-hidden {
+      transform: translateX(-$chat-panel-width);
+      width: calc(100vw + #{$expanded-side-bar-width});
+
+      &.collapsed {
+        width: calc(100vw + #{$chat-panel-width - $collapsed-side-bar-width});
+      }
+    }
+  }
+
+  &.collapsed {
+    left: $collapsed-side-bar-width;
+    max-width: calc(100vw - #{$collapsed-side-bar-width});
+  }
+
+  .chatbot {
+    position: relative;
+    display: flex;
+    width: $chat-panel-width;
+    max-height: calc(100vh - #{$O365-shell-height} - 4em);
+    padding-top: 15px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    flex-direction: row;
+    flex-shrink: inherit;
+    background-color: $color-white;
+    transition: visibility $chat-panel-transition-duration;
+
+    &.collapsed {
+      visibility: hidden;
+    }
+  }
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .app-content {
+    padding-top: 15px;
+    left: 24px;
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+
+    .page-container {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      height: 100%;
+    }
+
+    .page {
+      height: 100%;
+      width: 100%;
+    }
+
+    .scroll-container {
+      overflow: auto;
+      -ms-overflow-style: scrollbar;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "../variables";
+
+.app-sider {
+  .ba-SidebarFooter {
+    .ms-Button-icon {
+      background-image: $boticon;
+      height: 42px;
+      width: 42px;
+      margin: 0 -1px;
+    }
+  }
+}

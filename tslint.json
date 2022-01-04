@@ -1,0 +1,31 @@
+{
+  "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
+  "extends": "tslint:recommended",
+  "rules": {
+    "no-any": true,
+    "function-constructor": true,
+    "interface-name": false,
+    "max-classes-per-file": false,
+    "max-line-length": false,
+    "member-access": false,
+    "member-ordering": false,
+    "no-banned-terms": true,
+    "no-console": false,
+    "no-delete-expression": true,
+    "no-disable-auto-sanitization": true,
+    "no-document-domain": true,
+    "no-duplicate-parameter-names": true,
+    "no-eval": true,
+    "no-exec-script": true,
+    "no-object-literal-type-assertion": true,
+    "no-octal-literal": true,
+    "no-shadowed-variable": false,
+    "no-string-based-set-timeout": true,
+    "no-string-based-set-immediate": true,
+    "no-string-based-set-interval": true,
+    "object-literal-sort-keys": false,
+    "no-empty-interface": false,
+    "typedef": [true, "call-signature", "parameter"],
+    "variable-name": [true, "ban-keywords"]
+  }
+}

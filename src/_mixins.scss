@@ -1,0 +1,29 @@
+﻿@import "./variables";
+
+@mixin drop-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@mixin sub-title {
+  font-size: $font-size-m;
+  color: #444;
+  font-family: $font-family-normal;
+}
+
+@mixin caption {
+  font-size: $font-size-xs;
+  color: #666;
+}
+
+@mixin paragraph {
+  font-size: $font-size-s;
+  color: $color-foreground-text;
+  font-family: $font-family-normal;
+}
+
+@mixin dialog-node {
+  width: $node-width;
+  background-color: $color-white;
+  border-radius: $node-border-radius;
+  box-shadow: $node-box-shadow;
+}
